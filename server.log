@@ -1,0 +1,57 @@
+
+> rumah-makan@1.0.0 start
+> node server.js
+
+[dotenv@17.2.3] injecting env (9) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+Server running on port 5000
+Executing (default): SELECT 1+1 AS result
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Menus' AND TABLE_SCHEMA = 'warung_makan'
+Database connected
+Executing (default): SHOW INDEX FROM `Menus`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Stocks' AND TABLE_SCHEMA = 'warung_makan'
+Executing (default): SHOW INDEX FROM `Stocks`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Orders' AND TABLE_SCHEMA = 'warung_makan'
+Executing (default): SHOW INDEX FROM `Orders`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Users' AND TABLE_SCHEMA = 'warung_makan'
+Executing (default): SHOW INDEX FROM `Users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'MenuDays' AND TABLE_SCHEMA = 'warung_makan'
+Executing (default): SHOW INDEX FROM `MenuDays`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'MenuStocks' AND TABLE_SCHEMA = 'warung_makan'
+Executing (default): SHOW INDEX FROM `MenuStocks`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'Settings' AND TABLE_SCHEMA = 'warung_makan'
+Executing (default): SHOW INDEX FROM `Settings`
+Database synced
+Verifying token with secret: ***SET***
+Token verified for user: { id: 1, role: 'admin', iat: 1763705058, exp: 1763791458 }
+Verifying token with secret: ***SET***
+Token verified for user: { id: 1, role: 'admin', iat: 1763705058, exp: 1763791458 }
+Verifying token with secret: ***SET***
+Token verified for user: { id: 1, role: 'admin', iat: 1763705058, exp: 1763791458 }
+Verifying token with secret: ***SET***
+Token verified for user: { id: 1, role: 'admin', iat: 1763705058, exp: 1763791458 }
+Executing (default): SELECT `id`, `customerName`, `customerPhone`, `customerEmail`, `customerAddress`, `items`, `total`, `status`, `notes`, `paymentMethod`, `deliveryMethod`, `proofOfPayment`, `createdAt`, `updatedAt` FROM `Orders` AS `Order` ORDER BY `Order`.`createdAt` ASC;
+Executing (default): SELECT `Menu`.`id`, `Menu`.`name`, `Menu`.`description`, `Menu`.`price`, `Menu`.`image`, `Menu`.`available`, `Menu`.`category`, `Menu`.`createdAt`, `Menu`.`updatedAt`, `MenuDays`.`id` AS `MenuDays.id`, `MenuDays`.`menu_id` AS `MenuDays.menu_id`, `MenuDays`.`day_of_week` AS `MenuDays.day_of_week`, `MenuDays`.`is_active` AS `MenuDays.is_active`, `MenuDays`.`createdAt` AS `MenuDays.createdAt`, `MenuDays`.`updatedAt` AS `MenuDays.updatedAt` FROM `Menus` AS `Menu` LEFT OUTER JOIN `MenuDays` AS `MenuDays` ON `Menu`.`id` = `MenuDays`.`menu_id`;
+Executing (default): SELECT `Menu`.`id`, `Menu`.`name`, `Menu`.`description`, `Menu`.`price`, `Menu`.`image`, `Menu`.`available`, `Menu`.`category`, `Menu`.`createdAt`, `Menu`.`updatedAt`, `MenuDays`.`id` AS `MenuDays.id`, `MenuDays`.`menu_id` AS `MenuDays.menu_id`, `MenuDays`.`day_of_week` AS `MenuDays.day_of_week`, `MenuDays`.`is_active` AS `MenuDays.is_active`, `MenuDays`.`createdAt` AS `MenuDays.createdAt`, `MenuDays`.`updatedAt` AS `MenuDays.updatedAt` FROM `Menus` AS `Menu` LEFT OUTER JOIN `MenuDays` AS `MenuDays` ON `Menu`.`id` = `MenuDays`.`menu_id`;
+Executing (default): SELECT `id`, `customerName`, `customerPhone`, `customerEmail`, `customerAddress`, `items`, `total`, `status`, `notes`, `paymentMethod`, `deliveryMethod`, `proofOfPayment`, `createdAt`, `updatedAt` FROM `Orders` AS `Order` ORDER BY `Order`.`createdAt` ASC;
+Verifying token with secret: ***SET***
+Token verified for user: { id: 1, role: 'admin', iat: 1763705058, exp: 1763791458 }
+Executing (default): SELECT `id`, `customerName`, `customerPhone`, `customerEmail`, `customerAddress`, `items`, `total`, `status`, `notes`, `paymentMethod`, `deliveryMethod`, `proofOfPayment`, `createdAt`, `updatedAt` FROM `Orders` AS `Order` WHERE `Order`.`id` = '10';
+Executing (default): UPDATE `Orders` SET `status`=?,`updatedAt`=? WHERE `id` = ?
+Executing (default): SELECT `id`, `name`, `description`, `price`, `image`, `available`, `category`, `createdAt`, `updatedAt` FROM `Menus` AS `Menu` WHERE `Menu`.`id` IN ('9', '10');
+[EMAIL] Preparing completion email for order #10
+Invoice email sent to kciptaraksa@gmail.com: 250 2.0.0 OK  1763717801 41be03b00d2f7-bd75def6314sm4970058a12.7 - gsmtp
+[EMAIL] ✅ Completion email sent successfully for order #10
+Verifying token with secret: ***SET***
+Token verified for user: { id: 1, role: 'admin', iat: 1763705058, exp: 1763791458 }
+Executing (default): SELECT `id`, `customerName`, `customerPhone`, `customerEmail`, `customerAddress`, `items`, `total`, `status`, `notes`, `paymentMethod`, `deliveryMethod`, `proofOfPayment`, `createdAt`, `updatedAt` FROM `Orders` AS `Order` ORDER BY `Order`.`createdAt` ASC;
+Verifying token with secret: ***SET***
+Token verified for user: { id: 1, role: 'admin', iat: 1763705058, exp: 1763791458 }
+Executing (default): SELECT `id`, `customerName`, `customerPhone`, `customerEmail`, `customerAddress`, `items`, `total`, `status`, `notes`, `paymentMethod`, `deliveryMethod`, `proofOfPayment`, `createdAt`, `updatedAt` FROM `Orders` AS `Order` WHERE `Order`.`id` = '9';
+Executing (default): UPDATE `Orders` SET `status`=?,`updatedAt`=? WHERE `id` = ?
+Executing (default): SELECT `id`, `name`, `description`, `price`, `image`, `available`, `category`, `createdAt`, `updatedAt` FROM `Menus` AS `Menu` WHERE `Menu`.`id` IN ('9', '10');
+[EMAIL] Preparing completion email for order #9
+Invoice email sent to kciptaraksa@gmail.com: 250 2.0.0 OK  1763717819 41be03b00d2f7-bd75b61c29dsm5005571a12.0 - gsmtp
+[EMAIL] ✅ Completion email sent successfully for order #9
+Verifying token with secret: ***SET***
+Token verified for user: { id: 1, role: 'admin', iat: 1763705058, exp: 1763791458 }
+Executing (default): SELECT `id`, `customerName`, `customerPhone`, `customerEmail`, `customerAddress`, `items`, `total`, `status`, `notes`, `paymentMethod`, `deliveryMethod`, `proofOfPayment`, `createdAt`, `updatedAt` FROM `Orders` AS `Order` ORDER BY `Order`.`createdAt` ASC;
