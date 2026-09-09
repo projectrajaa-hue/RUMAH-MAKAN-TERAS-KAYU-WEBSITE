@@ -54,7 +54,70 @@ Responsible for developing the website from the front-end interface to the back-
 
 ### 1. Clone the Repository
 
-Clone this repository to your local computer:
+Clone this repository to your local computer.
 
-```bash
-git clone https://github.com/projectrajaa-hue/RUMAH-MAKAN-TERAS-KAYU-WEBSITE.git
+    git clone https://github.com/projectrajaa-hue/RUMAH-MAKAN-TERAS-KAYU-WEBSITE.git
+
+### 2. Open the Project
+
+Open the project folder using Visual Studio Code.
+
+    cd RUMAH-MAKAN-TERAS-KAYU-WEBSITE
+
+### 3. Install Dependencies
+
+Install the required dependencies.
+
+    npm install
+
+### 4. Configure Environment Variables
+
+Create a `.env` file in the project root directory and configure the required environment variables.
+
+Example:
+
+    DB_HOST=your_database_host
+    DB_USER=your_database_user
+    DB_PASSWORD=your_database_password
+    DB_NAME=your_database_name
+
+> **Important:** Do not upload the `.env` file to GitHub because it may contain sensitive information such as database credentials.
+
+### 5. Run the Application
+
+Start the application using:
+
+    npm start
+
+The application can then be accessed through the local server address provided in the terminal.
+
+## User Flow
+
+1. Open the restaurant website.
+2. Browse the restaurant information and available menu.
+3. Select food or products to order.
+4. Add selected items to the shopping cart.
+5. Review the order details.
+6. Proceed to the payment process.
+7. Complete the order using the available payment method.
+
+## Project Structure
+
+    RUMAH-MAKAN-TERAS-KAYU-WEBSITE/
+    ├── config/
+    ├── middleware/
+    ├── models/
+    ├── routes/
+    ├── services/
+    ├── uploads/
+    ├── migrations/
+    ├── server.js
+    ├── seed.js
+    ├── package.json
+    ├── package-lock.json
+    ├── .gitignore
+    └── README.md
+
+## Project Purpose
+
+The project was developed to provide a digital platform for restaurant customers to explore menus, place orders, and complete payments online. It also demonstrates the implementation of front-end, back-end, database, and UI/UX development in a full-stack web application.
